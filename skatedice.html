@@ -1,0 +1,48 @@
+ <!doctype html>
+<html lang="en">
+<head>
+<title>KTG</title>
+<meta charset="utf-8">
+<style>
+body {
+font-family: Verdana, Helvetica, sans-serif;
+background-color: black;
+color: green;
+}
+</style>
+
+</head>
+<body>
+<h1>KTG SkateDice</h1>
+<p id="phrase"></p>
+<img width="100px" height="100px" src="http://dl9fvu4r30qs1.cloudfront.net/ce/3a/aadd7fed48d896b3eb87f1cad46a/hackers.jpg" alt="nothing to show.">
+<script>
+
+// problems with the script ahorita...
+// 1.sweaty needs to be kind if fakie.
+// i believe it's if else then statements.
+// 2. misfit; AO and true
+// 3. el toro
+// 4. difficulty settings. reduce Degree of spin possible in RandomFunction; remove/reduce 1footed tricks with special weight added for Pud/Torque/Rough/...
+// ..... temporary solution. User skips shit that is two hard. 
+
+//5.music. 
+//
+//
+//
+document.write('<form><input type=button value="Refresh por Favor!" onClick="history.go()"></form>')
+function makePhrases() {
+var waysIn = ["inspin", "outspin", "3", "hurricane", "true", 'straight', 'zero', 'AO', 'fullcab AO', 'full True'];
+var trick1 = ["soul", "makio", "x", "mizou", "porn",'acid' ,'mistrial' ,"topsoul", "fish", "sweaty", "topporn",'topacid' ,'topmistrial'];
+var waysOut = ["rewind180out", "rewind3out", "rewind 5", "revert 5", "to fakie", 'to forward'];
+var rand1 = Math.floor(Math.random() * waysIn.length);
+var rand2 = Math.floor(Math.random() * trick1.length);
+var rand3 = Math.floor(Math.random() * waysOut.length);
+var phrase = waysIn[rand1] + " " + trick1[rand2] + " " + waysOut[rand3];
+var phraseElement = document.getElementById("phrase");
+phraseElement.innerHTML = phrase;
+}
+window.onload = makePhrases;
+</script>
+</body>
+</html>
